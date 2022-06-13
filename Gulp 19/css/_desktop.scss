@@ -1,0 +1,28 @@
+@media (min-width: 900px) {
+  
+    .navlist{
+        @include display(inline-block);
+      align-items: center;
+      }
+    
+      .logo{
+        float:left;
+      }
+    
+      nav ul li{
+        float:right;
+        @include display(block);
+        line-height: 5em;
+        padding-inline: 3rem;
+      }
+    
+      .grid-container {
+        @include display(flex, none, space-around);
+      }
+  
+      .grid-container > div {
+        text-overflow: clip;
+      }
+      
+    
+    }

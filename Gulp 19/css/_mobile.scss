@@ -1,0 +1,140 @@
+html {
+    box-sizing: border-box;
+  
+  }
+  *, *::before, *::after {
+    box-sizing: inherit;
+  }
+  
+  
+  body {
+    background-color: $primary-color;
+    @include nospace;
+    font-family: var(--secondary-font);
+    line-height: 2;
+  }
+  h1, h2, h3 {
+    font-family: var (--main-font);
+  }
+
+  h1 {
+    font-size: calc(--std-space*2);
+    margin-bottom: 0;
+  }
+
+  img {
+    max-width: 100%;
+    height:auto;
+  }
+  a {
+    color: $secondary-color;
+   &:hover {
+    text-decoration: none;
+  }}
+  
+  header {
+    border-bottom: 10px solid $highlight-color;
+  }
+
+  /* navbar styling */
+  
+  .navlist{
+    @include nospace;
+    list-style-type: none;
+    ;
+  }
+  
+  nav {
+
+  li {
+    margin: 0 1rem 1rem 1rem;
+    font-size: 1.3rem;
+    @include diff-display(flex,none,center);
+
+  }
+  /* max width on the image in pixels */
+  .logo img {
+    max-width: 150px;
+  }
+  /* flex basis on the image container, li */
+   .logo {
+    flex-basis: 100%;
+    @include text-align;
+  }
+   a {
+    color: white;
+    text-decoration: none;
+    @include display(block);
+  }
+}
+  nav a:hover {
+    color: $highlight-color;
+  }
+  /* establishes a white background */
+  .main-bkgd {
+    background: #ffffff url(https://assets.codepen.io/6306176/gulp-bean-bkgd.jpg) repeat-x bottom;
+    padding-bottom: 300px;
+  }
+  /* sits inside of the white background, centered */
+  .main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: calc(--std-space * 2);
+    @include diff-display(flex,wrap,space-between);
+  }
+  
+  article {
+    flex-basis: 73%;
+  
+  }
+  
+  img {
+    max-width: 100%;
+    border-radius:15px;
+    margin-top: 100px;
+  }
+  
+  figure {
+    margin: 3rem 0 0 0;
+    flex-basis: 25%;
+    background-color: $secondary-color;
+         img {
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;}
+  }
+  
+  .button {
+    @include display(inline-block);
+    background-color: $secondary-color;
+    border-radius: 10px;
+    padding: 0.5rem 1rem;
+    margin: 0;
+    color: #f2f2f2;
+    text-decoration: none;
+    border: 3px solid $secondary-color;
+  &:hover {
+    background-color: #f2f2f2;
+    color: $secondary-color}
+  }
+
+  footer {
+
+    color: #f2f2f2;
+    @include text-align;
+    border-top: 10px solid $highlight-color;
+
+   ul {
+    list-style-type: none;
+    @include nospace;
+    @include diff-display(flex,row wrap,center);
+   }
+
+  a {
+    color: #f2f2f2;
+    font-family: var(--secondary-font);
+    font-size: 2rem;
+   
+    @include display(block);
+    margin: 0 1rem 3rem 1rem;}
+  }
+  

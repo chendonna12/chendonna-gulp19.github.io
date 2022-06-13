@@ -1,0 +1,86 @@
+@media (min-width: 550px) {
+   #main-aboutus{
+    @include diff-display(none,nowrap,space-around);
+    
+    }
+
+    .contactus{
+        @include display(flex);
+        img{
+            float:right;
+          }     
+    }
+  
+    .contactdetail{
+      @include boxmodel (35px, 0);
+      white-space: nowrap;}
+
+    section .aboutus{
+    @include diff-display(flex,none,center);
+      align-items: center;
+  
+    }
+    .adetails{
+      box-sizing: content-box;
+      width:fit-content;
+      
+    }
+  
+    .images{
+    margin-top:5%;
+    }
+    .contactus img{
+      width:100%;
+      float:right;
+    }
+    .navlist{
+      @include nospace;
+      list-style-type: none;
+      @include display(flex,row wrap,center);
+  }
+  
+  section{
+  align-content:center;
+  }
+  .header-main{
+    @include text-align(left);
+    margin-left:0;
+    @include boxmodel(0, 10px);
+    width:100%;
+  }
+    img{
+      margin-top:5%;
+      margin-right:5%;
+      float:left;
+    }
+  
+    .grid-container {
+      @include display(grid);
+      grid-template-columns: auto auto auto auto auto auto;
+      gap: 10px;
+      @include boxmodel (0, 10px);
+    }
+    .grid-container > div {
+      @include text-align;
+      padding: 20px 0;
+      font-size: 30px;
+    }
+  
+    .item1 {
+      grid-row: 1;
+    }
+  
+    .item2 {
+      grid-row: 2;
+    }
+  
+    .item3 {
+      grid-row: 3;
+  
+    }
+
+    hgroup{
+      margin-left:0;
+      @include boxmodel (0, 10px);
+    }
+}
