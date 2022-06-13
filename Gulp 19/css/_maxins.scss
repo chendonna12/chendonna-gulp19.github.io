@@ -1,0 +1,19 @@
+/*mixins*/
+@mixin nospace{
+    margin:0;
+    padding:0;
+}
+
+@mixin boxmodel($margin,$padding){
+    margin: $margin;
+    padding: $padding;
+}
+
+@mixin text-dec{
+    text-decoration: none;
+}
+
+@mixin display($display, $flex-flow){
+    display: $display;
+    flex-flow: $flex-flow;
+}

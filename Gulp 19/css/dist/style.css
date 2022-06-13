@@ -1,7 +1,7 @@
-:root {
-  --main-font:"Poppins", sans-serif;
-  --secondary-font:"Lato", sans-serif;
-  --std-space: 1rem;
+/*variables*/
+/*mixins*/
+img {
+  width: 100%;
 }
 
 html {
@@ -16,16 +16,16 @@ body {
   background-color: #082B59;
   margin: 0;
   padding: 0;
-  font-family: var(--secondary-font);
+  font-family: "Lato", sans-serif;
   line-height: 2;
 }
 
 h1, h2, h3 {
-  font-family: var --main-font;
+  font-family: "Poppins", sans-serif;
 }
 
 h1 {
-  font-size: calc(--std-space*2);
+  font-size: 2rem;
   margin-bottom: 0;
 }
 
@@ -38,7 +38,7 @@ img {
 a {
   color: #59331d;
 }
-ahover {
+a:hover {
   text-decoration: none;
 }
 
@@ -48,34 +48,31 @@ header {
 
 /* navbar styling */
 .navlist {
-  padding: 0;
   margin: 0;
+  padding: 0;
   list-style-type: none;
 }
 
-nav {
-  /* max width on the image in pixels */
-  /* flex basis on the image container, li */
-}
 nav li {
   margin: 0 1rem 1rem 1rem;
   font-size: 1.3rem;
   display: flex;
   justify-content: center;
+  /* flex basis on the image container, li */
 }
-nav .logo img {
+nav li nav .logo img {
   max-width: 150px;
 }
-nav .logo {
+nav li nav .logo {
   flex-basis: 100%;
   text-align: center;
 }
+
 nav a {
   color: white;
   text-decoration: none;
   display: block;
 }
-
 nav a:hover {
   color: #d98555;
 }
@@ -90,10 +87,10 @@ nav a:hover {
 .main {
   max-width: 1200px;
   margin: 0 auto;
-  padding: calc(--std-space * 2);
+  padding: 2rem;
   display: flex;
   flex-flow: wrap;
-  justify-content: space-between;
+  justify-content: cneter;
 }
 
 article {
@@ -120,11 +117,11 @@ figure img {
   display: inline-block;
   background-color: #59331d;
   border-radius: 10px;
-  padding: 0.5rem 1rem;
+  padding: 0.5rem, 1rem;
   margin: 0;
   color: #f2f2f2;
-  text-decoration: none;
   border: 3px solid #59331d;
+  text-decoration: none;
 }
 .button:hover {
   background-color: #f2f2f2;
@@ -138,23 +135,23 @@ footer {
 }
 footer ul {
   list-style-type: none;
-  padding: 0;
   margin: 0;
+  padding: 0;
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
 }
 footer a {
   color: #f2f2f2;
-  font-family: var(--secondary-font);
+  font-family: "Lato", sans-serif;
   font-size: 2rem;
   display: block;
   margin: 0 1rem 3rem 1rem;
 }
 
-@media (min-width: 500px) {
+@media (min-width: 550px) {
   #main-aboutus {
-    flex-flow: nowrap;
+    flex-flow: row wrap;
     justify-content: space-around;
   }
 
@@ -192,8 +189,8 @@ footer a {
   }
 
   .navlist {
-    padding: 0;
     margin: 0;
+    padding: 0;
     list-style-type: none;
     display: flex;
     flex-flow: row wrap;
@@ -247,7 +244,7 @@ footer a {
     padding: 10px;
   }
 }
-@media (min-width: 1000px) {
+@media (min-width: 900px) {
   .navlist {
     display: inline-block;
     align-items: center;
@@ -273,3 +270,4 @@ footer a {
     text-overflow: clip;
   }
 }
+/*# sourceMappingURL=style.css.map */

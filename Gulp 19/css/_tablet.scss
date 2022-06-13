@@ -1,74 +1,75 @@
-
-
-@media (min-width: 550px) {
-   #main-aboutus{
-    @include display(flex);
-    @include diff-display(nowrap,space-around);
-    
-    }
-
-    .contactus{
-      @include display(flex);
-        img{
-            float:right;
-          }     
+ @media (min-width: 550px) {
+    #main-aboutus {
+      flex-flow:row wrap;
+      justify-content: space-around;
     }
   
-    .contactdetail{
-      @include boxmodel (35px, 0);
+    .contactus {
+      display: flex;
+    }
+  
+    .contactdetail {
+      margin: 35px;
       white-space: nowrap;
     }
-
-    section .aboutus{
-      @include display(flex);
-      @include diff-display(none,center);
+  
+    .contactus img {
+      float: right;
+    }
+  
+    section .aboutus {
+      display:flex;
+      justify-content: center;
       align-items: center;
-  
     }
-    .adetails{
+  
+    .adetails {
       box-sizing: content-box;
-      width:fit-content;
-      
+      width: fit-content;
     }
   
-    .images{
-    margin-top:5%;
+    .images {
+      margin-top: 5%;
     }
-    .contactus img{
-      width:100%;
-      float:right;
-    
+  
+    .contactus img {
+      width: 100%;
+      float: right;
     }
-    .navlist{
+  
+    .navlist {
       @include nospace;
       list-style-type: none;
-      @include display(flex);
-      @include display(row wrap, center);
-  }
+      @include display(flex,row wrap);
+      justify-content: center;
+    }
   
-  section{
-  align-content:center;
-  }
-  .header-main{
-    @include text-align(left);
-    margin-left:0;
-    @include boxmodel(0, 10px);
-    width:100%;
-  }
-    img{
-      margin-top:5%;
-      margin-right:5%;
-      float:left;
+    section {
+      align-content: center;
+    }
+  
+    .header-main {
+      text-align: left;
+      margin-left: 0;
+      padding: 10px;
+      width: 100%;
+    }
+  
+    img {
+      margin-top: 5%;
+      margin-right: 5%;
+      float: left;
     }
   
     .grid-container {
-      @include display(grid);
+      display: grid;
       grid-template-columns: auto auto auto auto auto auto;
       gap: 10px;
-      @include boxmodel (0, 10px);
+      padding: 10px;
     }
+  
     .grid-container > div {
-      @include text-align;
+      text-align: center;
       padding: 20px 0;
       font-size: 30px;
     }
@@ -83,11 +84,10 @@
   
     .item3 {
       grid-row: 3;
+    }
   
+    hgroup {
+      margin-left: 0;
+      padding: 10px;
     }
-
-    hgroup{
-      margin-left:0;
-      @include boxmodel (0, 10px);
-    }
-}
+  }

@@ -1,31 +1,29 @@
-
-:root{
-  --main-font:'Poppins', sans-serif;
-  --secondary-font:'Lato', sans-serif;
-  --base-font-size: 1rem;
-  --h:
-    h(var(--base-font-size));
+/*variables*/
+/*mixins*/
+img {
+  width: 100%;
 }
 
-
 html {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 *, *::before, *::after {
-  box-sizing: inherit;
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
 }
 
 body {
   background-color: #082B59;
-  margin: 0;  
+  margin: 0;
   padding: 0;
-  font-family: var(--secondary-font);
+  font-family: "Lato", sans-serif;
   line-height: 2;
 }
 
 h1, h2, h3 {
-  font-family: var(--main-font);
+  font-family: "Poppins", sans-serif;
 }
 
 h1 {
@@ -42,7 +40,8 @@ img {
 a {
   color: #59331d;
 }
-ahover {
+
+a:hover {
   text-decoration: none;
 }
 
@@ -52,26 +51,30 @@ header {
 
 /* navbar styling */
 .navlist {
-  padding: 0;
   margin: 0;
+  padding: 0;
   list-style-type: none;
 }
 
 nav li {
   margin: 0 1rem 1rem 1rem;
   font-size: 1.3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  /* flex basis on the image container, li */
 }
 
-/* max width on the image in pixels */
-nav .logo img {
+nav li nav .logo img {
   max-width: 150px;
 }
 
-/* flex basis on the image container, li */
-nav .logo {
-  flex-basis: 100%;
+nav li nav .logo {
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
   text-align: center;
 }
 
@@ -96,13 +99,19 @@ nav a:hover {
   max-width: 1200px;
   margin: 0 auto;
   padding: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-flow: wrap;
-  justify-content: space-between;
+  -ms-flex-flow: wrap;
+      flex-flow: wrap;
+  -webkit-box-pack: cneter;
+      -ms-flex-pack: cneter;
+          justify-content: cneter;
 }
 
 article {
-  flex-basis: 73%;
+  -ms-flex-preferred-size: 73%;
+      flex-basis: 73%;
 }
 
 img {
@@ -113,9 +122,11 @@ img {
 
 figure {
   margin: 3rem 0 0 0;
-  flex-basis: 25%;
+  -ms-flex-preferred-size: 25%;
+      flex-basis: 25%;
   background-color: #59331d;
 }
+
 figure img {
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
@@ -123,13 +134,13 @@ figure img {
 
 .button {
   display: inline-block;
-  background-color: #59331D;
+  background-color: #59331d;
   border-radius: 10px;
-  padding: 0.5rem 1rem;
+  padding: 0.5rem, 1rem;
   margin: 0;
   color: #f2f2f2;
-  text-decoration: none;
   border: 3px solid #59331d;
+  text-decoration: none;
 }
 
 .button:hover {
@@ -145,16 +156,23 @@ footer {
 
 footer ul {
   list-style-type: none;
-  padding: 0;
   margin: 0;
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 footer a {
   color: #f2f2f2;
-  font-family: var(--secondary-font);
+  font-family: "Lato", sans-serif;
   font-size: 2rem;
   display: block;
   margin: 0 1rem 3rem 1rem;
@@ -162,96 +180,105 @@ footer a {
 
 @media (min-width: 550px) {
   #main-aboutus {
-    flex-flow: nowrap;
-    justify-content: space-around;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
   }
-
   .contactus {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
   }
-
   .contactdetail {
     margin: 35px;
     white-space: nowrap;
   }
-
   .contactus img {
     float: right;
   }
-
   section .aboutus {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
-
   .adetails {
-    box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+            box-sizing: content-box;
     width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content;
   }
-
   .images {
     margin-top: 5%;
   }
-
   .contactus img {
     width: 100%;
     float: right;
   }
-
   .navlist {
-    padding: 0;
     margin: 0;
+    padding: 0;
     list-style-type: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
-
   section {
-    align-content: center;
+    -ms-flex-line-pack: center;
+        align-content: center;
   }
-
   .header-main {
     text-align: left;
     margin-left: 0;
     padding: 10px;
     width: 100%;
   }
-
   img {
     margin-top: 5%;
     margin-right: 5%;
     float: left;
   }
-
   .grid-container {
+    display: -ms-grid;
     display: grid;
-    grid-template-columns: auto auto auto auto auto auto;
+    -ms-grid-columns: auto auto auto auto auto auto;
+        grid-template-columns: auto auto auto auto auto auto;
     gap: 10px;
     padding: 10px;
   }
-
   .grid-container > div {
     text-align: center;
     padding: 20px 0;
     font-size: 30px;
   }
-
   .item1 {
+    -ms-grid-row: 1;
     grid-row: 1;
   }
-
   .item2 {
+    -ms-grid-row: 2;
     grid-row: 2;
   }
-
   .item3 {
+    -ms-grid-row: 3;
     grid-row: 3;
   }
-
   hgroup {
     margin-left: 0;
     padding: 10px;
@@ -261,26 +288,28 @@ footer a {
 @media (min-width: 900px) {
   .navlist {
     display: inline-block;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
-
   .logo {
     float: left;
   }
-
   nav ul li {
     float: right;
     display: block;
     line-height: 5em;
     padding-inline: 3rem;
   }
-
   .grid-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-around;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
   }
-
   .grid-container > div {
     text-overflow: clip;
   }
-}/*# sourceMappingURL=style.css.map */
+}
+/*# sourceMappingURL=style.css.map */
