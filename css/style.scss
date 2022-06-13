@@ -28,7 +28,7 @@ $accent-peach: #d98555;
     text-decoration: none;
 }
 
-@mixin display($display, $flex-flow,){
+@mixin display($display, $flex-flow){
     display: $display;
     flex-flow: $flex-flow;
 
@@ -57,6 +57,7 @@ $accent-peach: #d98555;
     @include nospace;
     line-height: 2;
   }
+
   h1, h2, h3 {
     font-family: $main-font;
   }
