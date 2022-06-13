@@ -1,11 +1,14 @@
+
+
 @media (min-width: 550px) {
    #main-aboutus{
-    @include diff-display(none,nowrap,space-around);
+    @include display(flex);
+    @include diff-display(nowrap,space-around);
     
     }
 
     .contactus{
-        @include display(flex);
+      @include display(flex);
         img{
             float:right;
           }     
@@ -13,10 +16,12 @@
   
     .contactdetail{
       @include boxmodel (35px, 0);
-      white-space: nowrap;}
+      white-space: nowrap;
+    }
 
     section .aboutus{
-    @include diff-display(flex,none,center);
+      @include display(flex);
+      @include diff-display(none,center);
       align-items: center;
   
     }
@@ -32,11 +37,13 @@
     .contactus img{
       width:100%;
       float:right;
+    
     }
     .navlist{
       @include nospace;
       list-style-type: none;
-      @include display(flex,row wrap,center);
+      @include display(flex);
+      @include display(row wrap, center);
   }
   
   section{

@@ -17,8 +17,7 @@
     display: $display;
 }
 
-@mixin diff-display ($display, $flex-flow, $justify-content){
-    display: $display;
+@mixin diff-display ($flex-flow, $justify-content){
     flex-flow: $flex-flow;
     justify-content: $justify-content;
 }

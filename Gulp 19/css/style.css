@@ -1,8 +1,12 @@
+
 :root{
   --main-font:'Poppins', sans-serif;
   --secondary-font:'Lato', sans-serif;
-  --std-space: 1rem;
+  --base-font-size: 1rem;
+  --h:
+    h(var(--base-font-size));
 }
+
 
 html {
   box-sizing: border-box;
@@ -156,7 +160,7 @@ footer a {
   margin: 0 1rem 3rem 1rem;
 }
 
-@media (min-width: 750px) {
+@media (min-width: 550px) {
   #main-aboutus {
     flex-flow: nowrap;
     justify-content: space-around;
@@ -254,7 +258,7 @@ footer a {
   }
 }
 
-@media (min-width: 1000px) {
+@media (min-width: 900px) {
   .navlist {
     display: inline-block;
     align-items: center;

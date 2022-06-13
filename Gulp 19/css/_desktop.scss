@@ -17,7 +17,8 @@
       }
     
       .grid-container {
-        @include display(flex, none, space-around);
+        @include display(flex);
+        @include display(none, space-around);
       }
   
       .grid-container > div {

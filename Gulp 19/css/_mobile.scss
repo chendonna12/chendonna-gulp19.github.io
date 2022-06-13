@@ -1,3 +1,14 @@
+
+
+:root{
+  --main-font:'Poppins', sans-serif;
+  --secondary-font:'Lato', sans-serif;
+  --base-font-size: 1rem;
+  --h:
+    h(var(--base-font-size));
+}
+
+
 html {
     box-sizing: border-box;
   
@@ -17,8 +28,8 @@ html {
     font-family: var (--main-font);
   }
 
-  h1 {
-    font-size: calc(--std-space*2);
+  h1 { 
+    font-size: calc(var(--h)*2);
     margin-bottom: 0;
   }
 
@@ -48,8 +59,9 @@ html {
 
   li {
     margin: 0 1rem 1rem 1rem;
-    font-size: 1.3rem;
-    @include diff-display(flex,none,center);
+    font-size: 1.3remvar((--h)+0.3rem);
+    @include display(flex);
+    @include diff-display(none,center);
 
   }
   /* max width on the image in pixels */
@@ -79,8 +91,9 @@ html {
   .main {
     max-width: 1200px;
     margin: 0 auto;
-    padding: calc(--std-space * 2);
-    @include diff-display(flex,wrap,space-between);
+    padding: 2rem;
+    @include display(flex);
+    @include diff-display(wrap,space-between);
   }
   
   article {
@@ -126,13 +139,14 @@ html {
    ul {
     list-style-type: none;
     @include nospace;
-    @include diff-display(flex,row wrap,center);
+    @include display(flex);
+    @include diff-display(row wrap,center);
    }
 
   a {
     color: #f2f2f2;
     font-family: var(--secondary-font);
-    font-size: 2rem;
+    font-size: calc(var(--h)*2);
    
     @include display(block);
     margin: 0 1rem 3rem 1rem;}
