@@ -57,7 +57,7 @@ header {
 }
 
 nav li {
-  margin: 0 1rem 1rem 1rem;
+  margin: 0;
   font-size: 1.3rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -184,6 +184,320 @@ footer a {
     -webkit-box-direction: normal;
         -ms-flex-flow: row wrap;
             flex-flow: row wrap;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .contactus {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .contactdetail {
+    margin: 35px;
+    white-space: nowrap;
+  }
+  .contactus img {
+    float: right;
+  }
+  section .aboutus {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .adetails {
+    -webkit-box-sizing: content-box;
+            box-sizing: content-box;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+  .images {
+    margin-top: 5%;
+  }
+  .contactus img {
+    width: 100%;
+    float: right;
+  }
+  .navlist {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  section {
+    -ms-flex-line-pack: center;
+        align-content: center;
+  }
+  .header-main {
+    text-align: left;
+    margin-left: 0;
+    padding: 10px;
+    width: 100%;
+  }
+  img {
+    margin-top: 5%;
+    margin-right: 5%;
+    float: left;
+  }
+  .grid-container {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: auto auto auto auto auto auto;
+        grid-template-columns: auto auto auto auto auto auto;
+    gap: 10px;
+    padding: 10px;
+  }
+  .grid-container > div {
+    text-align: center;
+    padding: 20px 0;
+    font-size: 30px;
+  }
+  .item1 {
+    -ms-grid-row: 1;
+    grid-row: 1;
+  }
+  .item2 {
+    -ms-grid-row: 2;
+    grid-row: 2;
+  }
+  .item3 {
+    -ms-grid-row: 3;
+    grid-row: 3;
+  }
+  hgroup {
+    margin-left: 0;
+    padding: 10px;
+  }
+}
+
+@media (min-width: 900px) {
+  .navlist {
+    display: inline-block;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .logo {
+    float: left;
+  }
+  nav ul li {
+    float: right;
+    display: block;
+    line-height: 5em;
+    padding-inline: 3rem;
+  }
+  .grid-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .grid-container > div {
+    text-overflow: clip;
+  }
+}
+/*variables*/
+/*mixins*/
+@media only screen and (max-width: 480px) {
+  img {
+    width: 100%;
+  }
+}
+
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+body {
+  background-color: #082B59;
+  font-family: "Lato", sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 2;
+}
+
+h1, h2, h3 {
+  font-family: "Poppins", sans-serif;
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 0;
+}
+
+/* make images flexible */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: #59331d;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+header {
+  border-bottom: 10px solid #d98555;
+}
+
+/* navbar styling */
+.navlist {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+nav li {
+  margin: 0 1rem 1rem 1rem;
+  font-size: 1.3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+nav .logo img {
+  max-width: 150px;
+}
+
+/* flex basis on the image container, li */
+nav .logo {
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+  text-align: center;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  display: block;
+}
+
+nav a:hover {
+  color: #d98555;
+}
+
+/* establishes a white background */
+.main-bkgd {
+  background: #ffffff url(https://assets.codepen.io/6306176/gulp-bean-bkgd.jpg) repeat-x bottom;
+  padding-bottom: 300px;
+}
+
+/* sits inside of the white background, centered */
+.main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: wrap;
+      flex-flow: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+article {
+  -ms-flex-preferred-size: 73%;
+      flex-basis: 73%;
+}
+
+img {
+  max-width: 100%;
+  border-radius: 15px;
+  margin-top: 100px;
+}
+
+figure {
+  margin: 3rem 0 0 0;
+  -ms-flex-preferred-size: 25%;
+      flex-basis: 25%;
+  background-color: #59331d;
+}
+
+figure img {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.button {
+  display: inline-block;
+  background-color: #59331d;
+  border-radius: 10px;
+  padding: 0.5rem 1rem;
+  margin: 0;
+  color: #f2f2f2;
+  text-decoration: none;
+  border: 3px solid #59331d;
+}
+
+.button:hover {
+  background-color: #f2f2f2;
+  color: #59331d;
+}
+
+footer {
+  color: #f2f2f2;
+  text-align: center;
+  border-top: 10px solid #d98555;
+}
+
+footer ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+footer a {
+  color: #f2f2f2;
+  font-family: "Lato", sans-serif;
+  font-size: 2rem;
+  display: block;
+  margin: 0 1rem 3rem 1rem;
+}
+
+@media (min-width: 550px) {
+  #main-aboutus {
+    -ms-flex-flow: nowrap;
+        flex-flow: nowrap;
     -ms-flex-pack: distribute;
         justify-content: space-around;
   }

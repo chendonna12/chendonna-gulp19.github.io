@@ -3,3 +3,296 @@
 @import"mobile";
 @import"tablet";
 @import"desktop";
+
+
+/*variables*/
+$main-font: "Poppins", sans-serif;
+$body-font: "Lato", sans-serif;
+$bkgd-color: #f2f2f2;
+$primary-blue: #082B59;
+$secondary-coffee: #59331d;
+$accent-peach: #d98555;
+
+/*mixins*/
+@mixin nospace{
+    margin:0;
+    padding:0;
+}
+
+@mixin boxmodel($margin,$padding){
+    margin: $margin;
+    padding: $padding;
+}
+
+@mixin text-dec{
+    text-decoration: none;
+}
+
+@mixin display($display, $flex-flow,){
+    display: $display;
+    flex-flow: $flex-flow;
+
+}
+
+
+
+@media only screen and (max-width: 480px) {
+    img {
+      width: 100%;
+    }
+  }
+  
+  html {
+    box-sizing: border-box;
+  
+  }
+  *, *::before, *::after {
+    box-sizing: inherit;
+  }
+  
+  
+  body {
+    background-color: $primary-blue;
+    font-family: $body-font;
+    @include nospace;
+    line-height: 2;
+  }
+  h1, h2, h3 {
+    font-family: $main-font;
+  }
+  h1 {
+    font-size: 2rem;
+    margin-bottom: 0;
+  }
+  /* make images flexible */
+  img {
+    max-width: 100%;
+    height:auto;
+  }
+  a {
+    color: $secondary-coffee;
+  }
+  a:hover {
+    text-decoration: none;
+  }
+  header {
+    border-bottom: 10px solid $accent-peach;
+  }
+  /* navbar styling */
+  
+  .navlist{
+    @include nospace;
+    list-style-type: none;
+    ;
+  }
+  
+nav li {
+    margin: 0 1rem 1rem 1rem;
+    font-size: 1.3rem;
+    display:flex;
+    justify-content: center;
+    }
+  nav .logo img {
+    max-width: 150px;
+  }
+  /* flex basis on the image container, li */
+   nav .logo {
+    flex-basis: 100%;
+    text-align: center;
+  }
+
+  nav a {
+    color: white;
+    @include text-dec;
+    display: block;
+    &:hover {
+    color: $accent-peach;
+  }}
+
+  /* establishes a white background */
+  .main-bkgd {
+    background: #ffffff url(https://assets.codepen.io/6306176/gulp-bean-bkgd.jpg) repeat-x bottom;
+    padding-bottom: 300px;
+  }
+  /* sits inside of the white background, centered */
+  .main {
+    max-width: 1200px;
+    @include boxmodel(0 auto,2rem);
+    @include display(flex,wrap);
+    justify-content: space-between;
+  }
+  
+  article {
+    flex-basis: 73%;
+  }
+  
+  img {
+    max-width: 100%;
+    border-radius:15px;
+    margin-top: 100px;
+  }
+  
+  figure {
+    margin: 3rem 0 0 0;
+    flex-basis: 25%;
+    background-color: $secondary-coffee;
+  }
+  
+  figure img {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+  
+  .button {
+    display: inline-block;
+    background-color: $secondary-coffee;
+    border-radius: 10px;
+    padding: 0.5rem 1rem;
+    margin: 0;
+    color: $bkgd-color;
+    text-decoration: none;
+    border: 3px solid $secondary-coffee;
+  }
+  .button:hover {
+    background-color: $bkgd-color;
+    color: $secondary-coffee;
+  }
+  footer {
+    color: $bkgd-color;
+    text-align: center;
+    border-top: 10px solid $accent-peach;
+  }
+  footer ul {
+    list-style-type: none;
+    @include nospace;
+    @include display(flex,row wrap);
+    justify-content: center;
+  }
+  footer a {
+    color: $bkgd-color;
+    font-family:$body-font;
+    font-size: 2rem;
+    display: block;
+    margin: 0 1rem 3rem 1rem;
+  }
+  
+  
+  @media (min-width: 550px) {
+  
+    #main-aboutus{
+      flex-flow: nowrap;
+      justify-content: space-around;
+    }
+  
+    .contactus{
+      display: flex;
+    }
+  
+    .contactdetail{
+      margin:35px;
+      white-space: nowrap;
+    }
+    .contactus img{
+      float:right;
+    }
+  
+    section .aboutus{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  
+    }
+    .adetails{
+      box-sizing: content-box;
+      width:fit-content;
+      
+    }
+  
+    .images{
+    margin-top:5%;
+    }
+    .contactus img{
+      width:100%;
+      float:right;
+    }
+    .navlist{
+      @include nospace;
+      list-style-type: none;
+      @include display(flex,row wrap);
+      justify-content: center;
+  }
+  
+  section{
+  align-content:center;
+  }
+  .header-main{
+    text-align:left;
+    margin-left:0;
+    padding:10px;
+    width:100%;
+  }
+    img{
+      margin-top:5%;
+      margin-right:5%;
+      float:left;
+    }
+  
+    .grid-container {
+      display: grid;
+      grid-template-columns: auto auto auto auto auto auto;
+      gap: 10px;
+      padding: 10px;
+    }
+    .grid-container > div {
+      text-align: center;
+      padding: 20px 0;
+      font-size: 30px;
+    }
+  
+    .item1 {
+      grid-row: 1;
+    }
+  
+    .item2 {
+      grid-row: 2;
+    }
+  
+    .item3 {
+      grid-row: 3;
+  
+    }
+    hgroup{
+      margin-left:0;
+      padding:10px;
+    }
+    }
+  
+  @media (min-width: 900px) {
+  
+  .navlist{
+    display:inline-block;
+    align-items: center;
+    }
+  
+    .logo{
+      float:left;
+    }
+  
+    nav ul li{
+      float:right;
+      display: block;
+      line-height: 5em;
+      padding-inline: 3rem;
+    }
+  
+    .grid-container {
+      display:flex;
+      justify-content: space-around;
+    }
+    .grid-container > div {
+      text-overflow: clip;
+    }
+    
+  
+  
+  }
